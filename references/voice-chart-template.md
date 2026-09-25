@@ -1,132 +1,154 @@
-# Voice Chart Template
+# Voice Chart Template for Gaming Web Apps
 
-A voice chart helps establish consistent brand personality across all UX text. Use this template to define your product's voice.
+Use this template to define a consistent voice for game-server hosting panels, dashboards, community tools, and gaming SaaS products.
 
-## Structure
+A useful voice chart has:
+- a small set of durable voice concepts
+- concrete characteristics
+- examples of what to do
+- examples of what to avoid
 
-A voice chart contains three key elements for each brand concept:
+Do not turn the chart into a list of marketing adjectives. Each concept must change how UI copy is written.
 
-1. **Concept** — A core brand principle or value
-2. **Voice Characteristics** — Adjectives describing how the concept manifests in writing
-3. **Examples** — Concrete do/don't pairs showing the voice in action
+## Recommended baseline
 
-## Template
+### Concept 1: Clear and direct
 
-### Concept 1: [Brand Principle]
+**Voice characteristics**: Scannable, specific, plain language
 
-**Voice characteristics**: [Adjective 1], [Adjective 2], [Adjective 3]
-
-**Description**: [1-2 sentences explaining what this means for the writing]
+**Description**: Put the state, action, or consequence first. Use the shortest wording that still lets users act correctly.
 
 **Do**:
-- Example of text that embodies this concept
-- Another example showing this voice
+- Server failed to start. Check the console for details.
+- Restart server
+- Backup created
 
 **Don't**:
-- Example of what to avoid
-- Counter-example that violates this voice
+- An error occurred while attempting to perform the requested operation.
+- Proceed with server restart operation
+- Your backup has been successfully created for you
 
 ---
 
-### Concept 2: [Brand Principle]
+### Concept 2: Confident and calm
 
-**Voice characteristics**: [Adjective 1], [Adjective 2], [Adjective 3]
+**Voice characteristics**: Reliable, composed, operational
 
-**Description**: [1-2 sentences explaining what this means for the writing]
+**Description**: Keep failures and incidents factual. Do not exaggerate, panic, or bury useful information in apologies.
 
 **Do**:
-- Example of text that embodies this concept
-- Another example showing this voice
+- Server controls are temporarily unavailable.
+- Connection lost. Reconnect to continue.
 
 **Don't**:
-- Example of what to avoid
-- Counter-example that violates this voice
+- Critical system failure!
+- We sincerely apologize for any inconvenience this unfortunate issue may have caused.
 
 ---
 
-### Concept 3: [Brand Principle]
+### Concept 3: Helpful
 
-**Voice characteristics**: [Adjective 1], [Adjective 2], [Adjective 3]
+**Voice characteristics**: Actionable, supportive, clear
 
-**Description**: [1-2 sentences explaining what this means for the writing]
+**Description**: When a user can recover, explain the next useful action. When the system does not know the cause, do not invent one.
 
 **Do**:
-- Example of text that embodies this concept
-- Another example showing this voice
+- Backup failed. There isn't enough storage available. Free up space and try again.
+- No matching servers. Clear your filters or try a different search.
 
 **Don't**:
-- Example of what to avoid
-- Counter-example that violates this voice
+- Backup failed.
+- No results.
+- Network error. (unless the system actually knows this)
 
 ---
 
-## Example: TAPP Transit System
+### Concept 4: Technical when needed
 
-### Concept 1: Helpful
+**Voice characteristics**: Accurate, specific, domain-aware
 
-**Voice characteristics**: Friendly, supportive, clear
-
-**Description**: TAPP is a companion that helps riders navigate the transit system with confidence. We anticipate questions and provide clear guidance.
+**Description**: Preserve technical terms when they help users operate or troubleshoot the product. Explain only when the audience needs it.
 
 **Do**:
-- "Your bus arrives in 5 minutes at Bay St."
-- "Tap your card when you board and when you exit."
+- RCON connection failed.
+- Query port is already in use.
+- DDoS mitigation is active.
 
 **Don't**:
-- "Arrival: 5 min"
-- "Payment required at entry and exit points."
+- Technical issue detected.
+- Something is wrong with networking.
+- Simplify every domain term into vague consumer language.
 
 ---
 
-### Concept 2: Efficient
+### Concept 5: Gaming-friendly
 
-**Voice characteristics**: Concise, direct, scannable
+**Voice characteristics**: Modern, approachable, restrained
 
-**Description**: Riders are often in a hurry. We respect their time by being brief and front-loading important information.
-
-**Do**:
-- "Route delayed 10 minutes due to traffic"
-- "Transfer at Main St for Line 3"
-
-**Don't**:
-- "Due to unexpected traffic conditions, your route is experiencing delays of approximately 10 minutes"
-- "You can transfer to Line 3 if you get off at Main St"
-
----
-
-### Concept 3: Trustworthy
-
-**Voice characteristics**: Honest, transparent, reliable
-
-**Description**: Riders depend on TAPP to get where they need to go. We're upfront about problems and provide accurate information.
+**Description**: Sound at home in a gaming product without forcing slang, memes, or competitive language into routine operations.
 
 **Do**:
-- "This route is currently unavailable. Use Route 42 instead."
-- "Your payment didn't go through. Update your card to continue."
+- Ready to play
+- Join the community
+- Invite your squad
 
 **Don't**:
-- "Service interruption on this route."
-- "Payment error. Try again."
+- GG EZ, server deployed!
+- Epic gamer server unlocked!
+- Bro, your server died.
 
----
+## Tone adaptations
 
-## Tips for Creating Your Voice Chart
+The product voice stays consistent, but tone changes with context.
 
-1. **Base it on brand values** — Review mission, vision, values, and personality
-2. **Use 3-5 concepts** — Enough to guide, not so many you can't remember
-3. **Be specific with examples** — Show actual interface text, not abstract descriptions
-4. **Test against real scenarios** — Apply to buttons, errors, and notifications
-5. **Share with your team** — Voice only works if everyone uses it consistently
-6. **Update as you learn** — Refine based on user research and team feedback
+### Routine controls
+Fast, neutral, efficient.
 
-## Common Voice Characteristics
+Examples:
+- Start server
+- Restarting
+- Changes saved
 
-**Positive tones**: Friendly, encouraging, optimistic, warm, enthusiastic, cheerful, supportive, welcoming, inspiring
+### Errors
+Calm, factual, recovery-focused.
 
-**Neutral tones**: Professional, straightforward, clear, direct, informative, practical, matter-of-fact, efficient
+Example:
+- Server stopped unexpectedly. Check the console for details.
 
-**Cautious/Serious tones**: Careful, thoughtful, measured, precise, formal, reserved, respectful
+### Destructive actions
+Serious and explicit.
 
-**Personality traits**: Playful, witty, conversational, casual, technical, sophisticated, humble, confident, empowering
+Example:
+- Wipe server data?
+- This removes the current world and player data. Server settings are kept.
 
-Choose characteristics that align with your brand and serve your users' needs in context.
+### Billing
+Precise and neutral.
+
+Example:
+- Payment failed. Update your payment method to keep the service active.
+
+### Community
+Friendly and inviting.
+
+Example:
+- Join the community on Discord.
+
+### Moderation
+Neutral and factual.
+
+Example:
+- Banned for 7 days. Ends 14 Oct 2026.
+
+## Product-specific customization
+
+Adapt this baseline to the product instead of replacing it with unrelated personality traits.
+
+Useful questions:
+1. Which users are primary: players, server owners, community admins, hosting customers, or technical operators?
+2. How technical is the interface?
+3. Which actions can cause downtime or data loss?
+4. Does the brand want more energy in community/marketing surfaces than in operational controls?
+5. Which terms are canonical across the product?
+
+For bilingual products, define voice once at the intent level, then localize English and Thai independently. Do not require Thai to mirror English wording.
