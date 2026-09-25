@@ -1,417 +1,266 @@
 ---
-name: ux-writing
-description: Create user-centered, accessible interface copy (microcopy) for digital products including buttons, labels, error messages, notifications, forms, onboarding, empty states, success messages, and help text. Use when writing or editing any text that appears in apps, websites, or software interfaces, designing conversational flows, establishing voice and tone guidelines, auditing product content for consistency and usability, reviewing UI strings, or improving existing interface copy. Applies UX writing best practices based on four quality standards — purposeful, concise, conversational, and clear. Includes accessibility guidelines, research-backed benchmarks (sentence length, comprehension rates, reading levels), expanded error patterns, tone adaptation frameworks, and comprehensive reference materials.
+name: gaming-webapp-ux-writing
+description: Write and review UX copy for gaming web apps, game-server hosting panels, dashboards, control panels, billing flows, community tools, and technical product interfaces in English and Thai. Use for buttons, labels, forms, server states, destructive actions, errors, warnings, notifications, onboarding, empty states, maintenance messaging, subscriptions, player/community features, localization, terminology audits, and product voice. Optimize for clear, concise, confident, helpful copy that stays technically accurate without sounding robotic, corporate, or overly gamer-styled.
 ---
 
-# UX Writing
+# Gaming Web App UX Writing
 
-Write clear, concise, user-centered interface copy (UX text/microcopy) for digital products and experiences. This skill provides frameworks, patterns, and best practices for creating text that helps users accomplish their goals.
+Write interface copy for gaming products and game-server platforms. Keep the original UX-writing priorities: purposeful, concise, conversational, and clear. Add two domain requirements: **operational accuracy** and **state awareness**.
 
-**Compatible with:** Claude, Codex, Cursor, and other agents that support the agent skills specification.
+## Core standards
 
-**Note:** This skill works with Codex CLI/IDE, not ChatGPT. ChatGPT cannot install or use skills.
+Every UI string must be:
 
-## When to Use This Skill
+1. **Purposeful** — Help the user understand, decide, recover, or act.
+2. **Concise** — Remove words that do not change meaning or action.
+3. **Natural** — Sound like a real product, not generated or translated copy.
+4. **Clear** — Prefer specific actions and states over vague wording.
+5. **Technically accurate** — Do not simplify a server or billing state until it becomes misleading.
+6. **State-aware** — Reflect whether an action is pending, running, failed, unavailable, destructive, or complete.
 
-Use this skill when:
-- Writing interface copy (buttons, labels, titles, messages, forms)
-- Editing existing UX text for clarity and effectiveness
-- Creating error messages, notifications, or success messages
-- Designing conversational flows or onboarding experiences
-- Establishing voice and tone for a product
-- Auditing product content for consistency and usability
+## Product voice
 
-## Core UX Writing Principles
+Use a voice that is:
 
-### The Four Quality Standards
+- **Clear and direct** — Front-load the status or action.
+- **Confident and calm** — Do not dramatize downtime, failures, or maintenance.
+- **Helpful** — Give the next useful action whenever one exists.
+- **Technical when needed** — Preserve terms users need to diagnose or operate the service.
+- **Gaming-friendly, not gamer-slang heavy** — Sound modern and familiar without forcing memes, hype, or edgy language.
 
-Every piece of UX text should be:
+Read [references/gaming-voice-and-tone.md](references/gaming-voice-and-tone.md) when defining product voice or reviewing tone across a flow.
 
-1. **Purposeful** — Helps users or the business achieve goals
-2. **Concise** — Uses the fewest words possible without losing meaning
-3. **Conversational** — Sounds natural and human, not robotic
-4. **Clear** — Unambiguous, accurate, and easy to understand
+## English and Thai
 
-### Key Best Practices
+Treat English and Thai as sibling product copy, not as literal source and translation.
 
-**Conciseness**
-- Use 40-60 characters per line maximum
-- Every word must have a job
-- Break dense text into scannable chunks
-- Front-load important information
+- Preserve the same user intent, technical meaning, state, and action.
+- Rewrite Thai naturally instead of mirroring English syntax.
+- Keep established technical nouns in English when Thai users commonly expect them.
+- Do not force a Thai translation for terms such as Server, Console, Backup, Mod, Plugin, Node, RCON, API, CPU, RAM, or DDoS when translation would reduce clarity.
+- Prefer concise Thai UI wording. Omit unnecessary pronouns and filler.
+- Avoid formal Thai patterns such as "ไม่สามารถดำเนินการ..." when a shorter natural form is accurate.
+- Do not append "ครับ/ค่ะ" to routine interface strings. Use politeness only where the product context genuinely calls for it.
 
-**Clarity**
-- Use plain language (7th grade reading level for general, 10th for professional)
-- Avoid jargon, idioms, and technical terms
-- Use consistent terminology throughout
-- Choose meaningful, specific verbs
+Read [references/thai-localization.md](references/thai-localization.md) for bilingual rules and examples.
 
-**Conversational Tone**
-- Write how you speak
-- Use active voice 85% of the time
-- Include prepositions and articles
-- Avoid robotic phrasing
+## Gaming and server terminology
 
-**User-Centered**
-- Focus on user benefits, not features
-- Anticipate and answer user questions
-- Use second-person ("you") language
-- Match user's language and mental models
+Use one term for one product concept. Do not alternate synonyms merely for style.
 
-## UX Text Patterns
+Examples:
+- **Server** — a game server the customer operates.
+- **Instance** — use only when the product actually exposes instances as a separate concept.
+- **Node** — physical or virtual host infrastructure; do not call it a server when users must distinguish the two.
+- **Restart** — stop and start the same service/server.
+- **Reinstall** — reinstall software or rebuild the game-server environment; never use as a synonym for restart.
+- **Reset** — return a setting or configuration to a defined default.
+- **Wipe** — remove game/world/player data when that is the product's established action.
+- **Backup** — a recoverable saved copy. Do not promise recoverability unless the system guarantees it.
+- **Console** — live command/output interface, not a generic dashboard.
+- **Online / Offline** — use only when they accurately represent reachability or running state.
 
-Apply these common patterns for interface elements.
+Read [references/gaming-terminology.md](references/gaming-terminology.md) before creating or auditing copy that contains server, infrastructure, networking, billing, moderation, or community terms.
 
-### Titles
-- **Purpose**: Orient users to where they are
-- **Format**: Noun phrases, sentence case
-- **Types**: Brand titles, content titles, category titles, task titles
-- **Examples**: "Account settings", "Your library", "Create new post"
+## Action labels
 
-### Buttons and Links
-- **Purpose**: Enable users to take action
-- **Format**: Active imperative verbs, sentence case
-- **Pattern**: `[Verb] [object]` 
-- **Examples**: "Save changes", "Delete account", "View details"
-- **Avoid**: Generic labels like "OK", "Submit", "Click here"
+Use specific verb-first labels.
 
-### Error Messages
-- **Purpose**: Explain problem and provide solution
-- **Format**: Empathetic, clear, actionable
-- **Pattern**: `[What failed]. [Why/context]. [What to do].`
+Prefer:
+- Start server
+- Stop server
+- Restart server
+- Create backup
+- Restore backup
+- Save changes
+- View console
+- Copy IP address
+- Renew subscription
+- Join Discord
 
-**Error Message Types**
+Avoid generic labels when context is not visible to assistive technology:
+- Submit
+- OK
+- Confirm
+- Continue
+- Click here
 
-**Validation Errors (Inline)**
-- Show as user completes field or on blur
-- Brief, specific guidance to correct input
-- Pattern: `[Field] [specific requirement]`
-- Examples:
-  - "Email must include @"
-  - "Password must be at least 8 characters"
-  - "Choose a date in the future"
-- Timing: Real-time or on field exit
-- Location: Below or beside the field
+Short labels such as **Start**, **Stop**, or **Restart** are acceptable when the surrounding component already names the server and the action remains unambiguous.
 
-**System Errors (Modal/Banner)**
-- Show when backend operations fail
-- Explain what happened and why
-- Pattern: `[Action failed]. [Likely cause]. [Recovery step].`
-- Examples:
-  - "Payment failed. Your card was declined. Try a different payment method."
-  - "Couldn't save changes. Connection lost. Reconnect and try again."
-  - "Upload failed. File is too large. Choose a file under 10MB."
-- Timing: Immediately after failure
-- Location: Modal dialog or prominent banner
+## Server states
 
-**Blocking Errors (Full-screen)**
-- Prevent continued use until resolved
-- Clear explanation of blocker and resolution
-- Pattern: `[What's blocked]. [Why]. [Specific action needed].`
-- Examples:
-  - "Update required. This version is no longer supported. Update now to continue."
-  - "Subscription expired. Your account is paused. Renew subscription to restore access."
-  - "Verification needed. Confirm your email to access features. Check your inbox."
-- Timing: On app launch or feature access
-- Location: Full screen or large modal
+State labels should describe the system, not instruct the user.
 
-**Permission Errors**
-- Explain benefit before requesting permission
-- Pattern: `[User benefit]. [Permission needed].`
-- Examples:
-  - "Get notified when orders ship. Enable notifications."
-  - "Find nearby stores. Allow location access."
-  - "Back up your photos. Grant storage permission."
-- Timing: When feature is first used
-- Location: In context of the feature
+Prefer:
+- Starting
+- Running
+- Restarting
+- Stopping
+- Offline
+- Updating
+- Backing up
+- Restoring
+- Maintenance
+- Unavailable
 
-**What to Avoid**
-- Technical codes without explanation ("Error 403")
-- Blame language ("invalid input", "illegal character")
-- Robotic tone ("An error has occurred")
-- Dead ends (error with no recovery path)
-- Vague causes ("Something went wrong")
+Do not present an in-progress state as completed. Do not use "Online" merely because the control panel is reachable if the game process is still starting.
 
-### Success Messages
-- **Purpose**: Confirm action completion
-- **Format**: Past tense, specific, encouraging
-- **Pattern**: `[Action] [result/benefit]`
-- **Examples**: "Changes saved", "Email sent", "Profile updated"
+For detailed state, action, and recovery patterns, read [references/gaming-ui-patterns.md](references/gaming-ui-patterns.md).
 
-### Empty States
-- **Purpose**: Guide users when content is absent
-- **Types**: First-use, user-cleared, error/no results
-- **Format**: Explanation + CTA to populate
-- **Example**: "No messages yet. Start a conversation to connect with your team."
+## Errors and recovery
 
-### Form Fields
-- **Labels**: Clear noun phrases describing input ("Email address", "Phone number")
-- **Instructions**: Verb-first, explain why information is needed
-- **Placeholder**: Use sparingly, only for standard inputs like "name@example.com"
-- **Helper text**: Static, on-demand, or automatic based on importance
+An error should answer, when known:
 
-### Notifications
-- **Purpose**: Deliver timely, valuable information
-- **Types**: Action-required (intrusive), Passive (less intrusive)
-- **Format**: Verb-first title + contextual description
-- **Example**: "Update required. Install the latest version to continue."
+1. What failed?
+2. What useful cause or constraint is known?
+3. What can the user do next?
 
-## Voice and Tone
+Pattern:
 
-### Voice (Consistent Brand Personality)
-Voice is the consistent personality of the product. Establish voice using:
-- **Concepts**: 3-5 key brand principles/values
-- **Voice characteristics**: Descriptive adjectives for each concept
-- **Do/Don't examples**: Concrete examples showing voice in action
+`[Action/state failed]. [Useful cause]. [Recovery action].`
 
-See references/voice-chart-template.md for creating a voice chart.
+Good:
+- **Server failed to start. Check the console for the latest error.**
+- **Backup failed. There isn't enough storage available. Free up space and try again.**
+- **Connection lost. Reconnect to continue viewing the console.**
 
-### Tone (Adaptive to Context)
-Tone is how voice adapts to specific situations. While voice remains constant, tone shifts based on user context and emotional state.
+Avoid:
+- Something went wrong.
+- An unexpected error occurred.
+- Operation failed.
+- Error 500.
 
-**Tone Variables**
-- **Purpose**: Why user is seeing this text (information, action, confirmation)
-- **Context**: What user is trying to do (learning, completing task, recovering from error)
-- **Emotional state**: How user likely feels (frustrated, excited, confused, cautious)
-- **Stakes**: Impact of the action (low: changing theme, high: deleting account)
+Keep error codes when they help support or troubleshooting, but pair them with human-readable copy.
 
-**Tone Adaptation by User Emotional State**
+Never invent a cause. If the system does not know why an action failed, say what is known and point to the next diagnostic or recovery step.
 
-**Frustrated** (errors, failures, blockers)
-- Empathetic and solution-focused
-- Acknowledge the problem without blame
-- Provide clear recovery path
-- Example: "Payment failed. Your card was declined. Try a different payment method."
+## Destructive and high-risk actions
 
-**Confused** (first use, complex features)
-- Patient and explanatory
-- Break down steps clearly
-- Provide context and guidance
-- Example: "Connect your bank to see spending insights. We'll guide you through it."
+Be explicit when an action can cause downtime, data loss, billing impact, access loss, or irreversible changes.
 
-**Confident** (routine tasks, return visits)
-- Efficient and direct
-- Minimal explanation
-- Quick confirmation
-- Example: "Saved"
+For confirmations:
+- Name the action in the title.
+- State the consequence before the primary action.
+- Identify what is preserved and what is removed when relevant.
+- Use the exact destructive action as the primary button label.
+- Do not use fear, guilt, or dark patterns.
 
-**Cautious** (high-stakes actions, data loss)
-- Serious and transparent
-- Clear consequences
-- Respectful of user's decision
-- Example: "Delete account? You'll lose all data and this can't be undone."
+Example:
 
-**Successful** (completions, achievements)
-- Positive and encouraging
-- Proportional to achievement
-- Brief celebration
-- Example: "Profile updated. Your changes are live."
+**Wipe server data?**
 
-**Tone Adaptation by Content Type**
+This removes the current world and player data. Server settings are kept.
 
-**Error messages**: Empathetic, reassuring, solution-focused
-- Never blame user
-- Explain what happened
-- Provide clear next step
+[Cancel] [Wipe server data]
 
-**Success messages**: Positive, specific, encouraging
-- Confirm what happened
-- Proportional to action importance
-- Brief and clear
+Use [references/gaming-ui-patterns.md](references/gaming-ui-patterns.md) for restart, reinstall, wipe, restore, cancellation, and permission patterns.
 
-**Instructions**: Clear, direct, helpful
-- Front-load key action
-- Explain why when needed
-- Use simple steps
+## Maintenance and incidents
 
-**Onboarding**: Inviting, encouraging, concise
-- Welcome without overwhelming
-- Focus on value
-- Celebrate early wins
+Write operational notices in this order:
 
-**Confirmations**: Serious, transparent, respectful
-- Clear about consequences
-- No manipulation
-- Easy to back out
+1. Current impact
+2. Scope
+3. User action, if any
+4. Next update or recovery state, only when known
 
-**Empty states**: Hopeful, actionable, guiding
-- Explain why it's empty
-- Provide clear next action
-- Keep encouraging tone
+Prefer:
+- **Server controls are temporarily unavailable during maintenance. Running servers are not affected.**
 
-## Editing Process
+Avoid:
+- **We're currently experiencing an unforeseen technical issue and sincerely apologize for any inconvenience caused.**
 
-Edit UX text in four phases:
+Do not claim an ETA, root cause, or fix until known.
 
-### Phase 1: Purposeful
-- Does text help user achieve their goal?
-- Does text serve business objectives?
-- Is value to user clear?
-- Are concerns anticipated and addressed?
+## Billing and subscriptions
 
-### Phase 2: Concise
-- Remove unnecessary words
-- Combine redundant information
-- Ensure every word earns its space
-- Front-load important concepts
+Use exact billing terms and separate access state from payment state.
 
-### Phase 3: Conversational
-- Read aloud—would you say this?
-- Use active voice (unless passive is clearer)
-- Include natural connecting words
-- Avoid corporate jargon
+Distinguish:
+- Payment failed
+- Payment pending
+- Subscription expired
+- Subscription canceled
+- Renewal scheduled
+- Service suspended
+- Refund requested / processed
 
-### Phase 4: Clear
-- Use specific, accurate verbs
-- Maintain consistent terminology
-- Test readability (Hemingway Editor, Flesch-Kincaid)
-- Ensure unambiguous meaning
+Do not say "Your server was deleted" if the actual state is suspended or retained for a grace period.
+
+Surface dates, retention windows, and consequences when they affect the user's decision.
+
+## Empty states and onboarding
+
+Empty states should explain what is missing and provide the next useful action.
+
+Good:
+- **No servers yet**  
+  Create your first server to get started.  
+  [Create server]
+
+- **No backups yet**  
+  Create a backup before making major changes.  
+  [Create backup]
+
+Do not add motivational filler that delays the action.
+
+For onboarding, teach the minimum needed for the next successful step. Avoid long welcome copy before users can do anything.
+
+## Community and player-facing features
+
+For whitelist, queue, bans, reports, Discord, roles, or player management:
+- Use neutral, factual wording.
+- Separate status from judgment.
+- Show duration and scope for temporary restrictions when available.
+- Do not expose private moderation notes to players unless intentionally designed for that audience.
+- Avoid joking language in enforcement, appeals, payments, or account access.
+
+## Accessibility
+
+- Keep visible labels meaningful without relying on icons or color.
+- Write descriptive links.
+- Pair field errors with the affected field.
+- Do not communicate server health only with green/red indicators.
+- Make destructive actions distinguishable by wording, not color alone.
+- Preserve technical identifiers when screen-reader users may need to copy them.
+
+Read [references/accessibility-guidelines.md](references/accessibility-guidelines.md) for the full accessibility checklist.
 
 ## Workflow
 
-1. **Understand context**
-   - User goals and needs
-   - Business objectives
-   - Technical constraints
-   - Emotional state of user
+1. Identify the user's goal and the system state.
+2. Identify the UI surface: button, label, status, error, modal, toast, form, onboarding, billing, or announcement.
+3. Preserve technical facts and product terminology.
+4. Draft the shortest version that still lets the user act correctly.
+5. Adapt tone to risk and emotional context.
+6. For TH/EN, localize intent instead of translating sentence structure.
+7. Check accessibility and destructive-action clarity.
+8. If reviewing a flow, check terminology and state consistency across every screen.
 
-2. **Draft content**
-   - Start with conversation (what would you say?)
-   - Apply appropriate pattern
-   - Consider voice and tone
-   - Front-load important information
+## Review checklist
 
-3. **Edit iteratively**
-   - Phase 1: Purposeful
-   - Phase 2: Concise
-   - Phase 3: Conversational
-   - Phase 4: Clear
+Before finalizing copy, verify:
 
-4. **Test and measure**
-   - Review with team
-   - Test with users when possible
-   - Measure task completion, comprehension
-   - Iterate based on feedback
-
-## Accessibility in UX Writing
-
-Writing accessible content ensures all users, including those using assistive technology, can understand and interact with your product.
-
-### Core Accessibility Principles
-
-**Screen Reader Optimization**
-- Label all interactive elements explicitly ("Submit form" not just "Submit")
-- Write descriptive link text ("Read pricing details" not "Click here")
-- Structure error messages to work with screen readers (error + field label read together)
-- Use ARIA labels when visual context isn't sufficient
-
-**Cognitive Accessibility**
-- Target 8-14 words per sentence (8 words = 100% comprehension, 14 words = 90%)
-- Break complex information into scannable chunks
-- Use clear headings and logical hierarchy
-- Provide consistent, predictable patterns
-
-**Multi-Modal Communication**
-- Don't rely on color alone to convey meaning
-- Pair visual indicators with text ("Error: Email required" with red icon)
-- Provide text alternatives for icons and images
-- Ensure sufficient color contrast (WCAG AA minimum: 4.5:1)
-
-**Plain Language for All**
-- Target 7th-8th grade reading level for general audience
-- Define technical terms when first used
-- Avoid idioms, metaphors, and cultural references
-- Use common, everyday words
-
-### Accessible Pattern Examples
-
-**Buttons**
-- ❌ Poor: "Submit" (context missing for screen readers)
-- ✅ Good: "Submit application"
-
-**Links**
-- ❌ Poor: "Click here for more information"
-- ✅ Good: "Read our privacy policy"
-
-**Error Messages**
-- ❌ Poor: Red text showing "Invalid"
-- ✅ Good: "Error: Email must include @" (with error icon)
-
-**Form Labels**
-- ❌ Poor: Placeholder-only fields
-- ✅ Good: Visible label + optional placeholder
-
-## UX Text Benchmarks
-
-Use these research-backed metrics to create effective UX text.
-
-### Sentence Length Targets
-
-**By Content Type**
-- **Buttons/CTAs**: 2-4 words ideal, 6 word maximum
-- **Titles**: 3-6 words, 40 characters maximum
-- **Error messages**: 12-18 words (including solution)
-- **Instructions**: 20 words maximum, 14 ideal
-- **Body copy**: 15-20 words per sentence average
-- **Notifications**: 10-15 words for title + body
-
-**Comprehension Rates**
-- 8 words or fewer: 100% user comprehension
-- 14 words or fewer: 90% user comprehension
-- 25 words: Maximum before significant comprehension drop
-
-### Character and Line Length
-
-**Optimal Ranges**
-- **Line length**: 40-60 characters for maximum readability
-- **Button labels**: 15-25 characters
-- **Page titles**: 30-50 characters
-- **Notification titles**: 35-45 characters
-
-### Reading Level Guidelines
-
-**By Audience**
-- **General public**: 7th-8th grade (Flesch-Kincaid)
-- **Professional tools**: 9th-10th grade
-- **Technical products**: 10th-11th grade
-- **Specialized fields**: 11th-12th grade (only when necessary)
-
-**Testing Tools**
-- Hemingway Editor: Highlights complex sentences
-- Readable.com: Provides multiple readability scores
-- Microsoft Word: Built-in Flesch-Kincaid scoring
-
-## Common Mistakes to Avoid
-
-- Using passive voice excessively
-- Generic button labels ("Submit", "OK")
-- Blaming users in error messages
-- Overly clever humor in serious contexts
-- Inconsistent terminology
-- Hidden instructions or explanations
-- System-oriented language vs. user language
-- Too many words (not concise enough)
-- Robotic, corporate tone
-- Relying on color alone for meaning
-- Writing inaccessible link text ("Click here")
-
-## Quick Reference
-
-**Sentence case**: "Save your changes" (not "Save Your Changes")  
-**Active imperative for buttons**: "Delete account" (not "Account deletion")  
-**User-focused**: "Save time with shortcuts" (not "We offer shortcuts")  
-**Specific verbs**: "Delete" (not "Remove" when permanently deleting)  
-**Front-loaded**: "Password must be 8 characters" (not "Must be 8 characters for your password")
+- Does the string describe the correct system state?
+- Is the next action obvious when action is possible?
+- Is any cause presented as fact actually known?
+- Are destructive consequences explicit?
+- Is terminology consistent?
+- Would the Thai version sound natural to a Thai user?
+- Would the English version sound like product UI rather than documentation?
+- Can a screen-reader user understand the action without visual context?
+- Did we avoid hype, slang, corporate filler, and translation-like wording?
 
 ## Resources
 
-This skill includes:
-- **references/accessibility-guidelines.md**: Comprehensive guide to writing accessible UX text for all users
-- **references/voice-chart-template.md**: Template for creating a product voice chart
-- **references/content-usability-checklist.md**: Comprehensive checklist for evaluating UX text quality
-- **references/patterns-detailed.md**: Extended examples of UX text patterns in different voices
-- **examples/real-world-improvements.md**: Before/after transformations with detailed analysis and scoring
-- **templates/error-message-template.md**: Fillable template for writing effective error messages
-- **templates/empty-state-template.md**: Guide for creating helpful empty states
-- **templates/onboarding-flow-template.md**: Framework for designing clear onboarding experiences
-- **docs/figma-integration.md**: Guide for using this skill with Figma MCP (Claude Code, Codex, and Cursor)
+Load only what is relevant:
+
+- [references/gaming-voice-and-tone.md](references/gaming-voice-and-tone.md) — product voice and tone by situation.
+- [references/gaming-ui-patterns.md](references/gaming-ui-patterns.md) — server states, destructive actions, errors, billing, maintenance, and community patterns.
+- [references/gaming-terminology.md](references/gaming-terminology.md) — canonical game-server and hosting terminology.
+- [references/thai-localization.md](references/thai-localization.md) — Thai/English localization rules and examples.
+- [references/accessibility-guidelines.md](references/accessibility-guidelines.md) — accessibility guidance.
+- [references/content-usability-checklist.md](references/content-usability-checklist.md) — optional structured UX-copy review.
+- [templates/error-message-template.md](templates/error-message-template.md) — detailed error template.
+- [templates/empty-state-template.md](templates/empty-state-template.md) — empty-state template.
+- [templates/onboarding-flow-template.md](templates/onboarding-flow-template.md) — onboarding template.
