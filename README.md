@@ -1,3 +1,21 @@
+# Gaming Web App UX Writing Fork
+
+> Customized from `content-designer/ux-writing-skill` for gaming web apps, game-server hosting panels, dashboards, community tools, and bilingual English/Thai product interfaces.
+
+This branch adds domain-specific guidance for server controls, states, destructive actions, backups, maintenance, billing, moderation/community features, technical terminology, and Thai localization.
+
+**Branch:** `webapp-gaming`
+
+**Primary skill entrypoint:** `SKILL.md`
+
+**Gaming references:**
+- `references/gaming-voice-and-tone.md`
+- `references/gaming-ui-patterns.md`
+- `references/gaming-terminology.md`
+- `references/thai-localization.md`
+
+---
+
 # Agent Skill for UX Writing
 
 > Scale content quality through AI-powered design system enforcement
